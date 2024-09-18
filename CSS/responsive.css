@@ -1,0 +1,39 @@
+/* =================
+  Breakpoints
+ ================= */
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* Header */
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: inline;
+    position: static;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 1em;
+  }
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .post-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -15,162 +15,85 @@
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-size: 12px;
   background-color: var(--white);
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Sans 3', sans-serif;
   text-align: center;
 }
 
 /* =================
-  Typography 
+  Layout
  ================= */
-
-h1 {
-  font-size: 1.15rem;
-}
-
-p {
-  margin: 0;
-}
-
-h1,
-.title {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-}
-
-span {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 1rem;
-  line-height: 1.25;
-  color: var(--accent-light);
-}
-
-/* =================
-  Header
- ================= */
-
-header {
-  padding: 1.65em;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header,
-.logo-container {
+body {
   display: flex;
-  gap: 0.5em;
+  flex-direction: column;
 }
 
-.logo {
-  width: 2em;
-  object-fit: contain;
+.page-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.menu {
-  display: none;
-}
-
-.show-menu {
-  display: block;
-  position: fixed;
-  padding: 1em;
-  text-align: right;
-  background-color: var(--white);
-  right: 0;
-  top: 75px;
+main {
+  flex: 1 0 auto;
+  background-color: var(--background);
 }
 
 ul {
-  /* margin: 0; */
   padding: 0;
   list-style: none;
-  /* background-color: var(--accent); */
 }
 
 li {
   display: block;
 }
 
-li a {
-  color: var(--accent-dark);
-  font-family: 'Source Code Pro', monospace;
-  font-size: 1.3rem;
-  padding: 1em;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-/* li a.selected {
-  font-weight: 700;
-} */
-
-li a:hover {
-  text-decoration: 3px underline var(--accent-dark);
-}
-
-.hamburger {
-  display: block;
-  text-align: right;
+.hero-section {
+  background-image: url('/assets/images/hero-img.jpg');
+  margin-bottom: 2rem;
+  background-size: cover;
+  height: 40vh;
   position: relative;
-}
-
-.fa-solid {
-  font-size: 2rem;
-  color: var(--accent-dark);
-  padding: 0.5em;
-  cursor: pointer;
-}
-
-/* =================
-  Layout
- ================= */
-main {
-  background-color: var(--background);
-}
-
-/* =================
-  Footer
- ================= */
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 2.5em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   color: var(--white);
-  background-color: var(--accent-dark);
-  text-align: center;
-  font-size: 1.25rem;
+  z-index: 1;
 }
 
-/* =================
-  Breakpoints
- ================= */
+.hero-post img {
+  width: 100%;
+  height: auto;
+}
 
-@media (min-width: 768px) {
-  body {
-    font-size: 16px;
-  }
+.hero-post {
+  padding: 0 1.75em 2.33em 1.75em;
+}
 
-  /* Header */
-  .hamburger {
-    display: none;
-  }
-  .menu {
-    display: inline;
-    position: static;
-  }
+.hero-section,
+.main-posts {
+  text-align: left;
+}
 
-  ul {
-    text-align: center;
-  }
+.post-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+.main-posts {
+  padding: 1.75em;
+}
 
-  li {
-    display: inline-block;
-    margin: 0 1em;
-  }
+.post-item {
+  margin-bottom: 3.4em;
+}
+
+.post-item img {
+  margin-bottom: 1.15em;
+  width: 100%;
+  height: auto;
 }

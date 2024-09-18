@@ -1,0 +1,23 @@
+/* =================
+  Button
+ ================= */
+button {
+  display: block;
+  margin: 20px auto;
+  background-color: transparent;
+  color: var(--black);
+  text-decoration: 2px underline var(--black);
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+button:hover {
+  color: var(--accent-dark);
+  text-decoration: 2px underline var(--accent-dark);
+}
+
+.hidden {
+  display: none;
+}

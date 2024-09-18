@@ -1,0 +1,12 @@
+/* =================
+  Footer
+ ================= */
+
+footer {
+  flex-shrink: 0;
+  padding: 2.5em;
+  color: var(--white);
+  background-color: var(--accent-dark);
+  text-align: center;
+  font-size: 1.25rem;
+}
